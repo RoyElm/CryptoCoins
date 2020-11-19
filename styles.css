@@ -1,0 +1,303 @@
+html,body{
+    box-sizing: border-box;
+
+    height: 100%;
+
+    background-image: url(assets/images/backGroundImage.png);
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/*---------------------------------------------------------------*/
+/*global divs */
+.content-div {
+    margin: 0 auto;
+    max-width: 1050px;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+/*---------------------------------------------------------------*/
+/*Header!*/
+#header {
+    border-bottom: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imageContainer{
+    display: flex;
+}
+
+.imageContainer > img {
+    width: 200px;
+    height: 150px;
+    position: relative;
+    top: 59px;
+    border-bottom: 3px solid black;
+}
+
+.borderLeft {
+    position: absolute;
+    top: 150px;
+    left: -5;
+    border-left: 3px solid black;
+    height: 59px;
+}
+
+#header h1 {
+    font-weight: bolder;
+    color: whitesmoke;
+    font-size: xxx-large;
+    margin: auto;
+}
+
+/*---------------------------------------------------------------*/
+/* Card css!!*/
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    border-radius: 5px;
+    height: auto;
+    border: 1px solid whitesmoke;
+}
+
+.card-group {
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-group>.card {
+    -ms-flex: none;
+    flex:none;
+    margin-bottom: 0;
+}
+
+.card-body{
+    border: 0.1px solid lightgray;
+}
+
+.infoCard , .infoCard > *{
+    width: 300px;
+}
+
+/*---------------------------------------------------------------*/
+/*Switch css!*/
+.custom-switch .custom-control-label::before {
+    width: 50px;
+    border-radius: 12px;
+    height: 26px;
+}
+
+.custom-switch .custom-control-input:checked~.custom-control-label::after {
+    -webkit-transform: translateX(1.5rem);
+    transform: translateX(1.5rem);
+}
+
+.custom-switch .custom-control-label::after {
+    top: calc(.25rem + 3px);
+    left: calc(-2.25rem + 3px);
+    width: calc(1rem - -2px);
+    height: calc(1rem - -3px);
+    background-color: white;
+}
+
+.custom-control-label::before {
+    background-color: lightgray;
+}
+
+.custom-control {
+    z-index: 0;
+}
+
+li {
+    margin-top: 10px;
+}
+
+li > button {
+    border-radius: 10px;
+}
+
+/*---------------------------------------------------------------*/
+/*Collapse Css*/
+.collapse > * , .collapse{
+    width: 270px;
+}
+
+h6 {
+    text-decoration: underline ;
+}
+
+/*Nav Bar*/
+
+.nav-item > * , .form-inline > *{
+    font-weight: bolder;
+}
+
+.btn-outline-success {
+    background-color: white;
+}
+
+.navbar-collapse {
+    justify-content: space-between;
+}
+.btn-outline-dark{
+    color: whitesmoke;
+    border: none;
+}
+
+/*---------------------------------------------------------------*/
+/*Progress Bar*/
+
+.progressLoading {
+    text-align: center;
+}
+
+.progressLoading > * {
+    width: 150px;
+    height: 150px;
+}
+
+/*---------------------------------------------------------------*/
+/*Live Report*/
+
+.liveReports h2 {
+    color: whitesmoke;
+}
+
+/*---------------------------------------------------------------*/
+/*About*/
+
+#aboutContainer{
+    display: inline-flex;
+}
+
+.aboutHTML{
+    font-weight: bolder;
+}
+
+.aboutHTML a {
+    color: #ff7b25;
+}
+
+.aboutHTML p {
+    color: #fff2df;
+}
+
+.aboutHTML h3 {
+    color:#feb236 ;
+}
+
+.aboutHTML .personalPhoto {
+    height: 150px;
+    margin-top: 65px;
+}
+
+.linkedin {
+    height: 30px;
+}
+
+/*---------------------------------------------------------------*/
+/*Home*/
+
+.popover-body {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pop-inner {
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    padding: 25px;
+    margin: 5% auto;
+}
+
+/*---------------------------------------------------------------*/
+/*iPad Pro! View*/
+@media only screen and (max-device-width: 1200px) {
+    .card{
+        width: 300px;
+    }
+
+    .imageContainer > img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .borderLeft{
+        top: 120px;
+    }
+
+    .infoCard , .infoCard > *{
+        width: 200px;
+    }
+
+    .navbar-collapse {
+        flex-grow: 0.65;
+    }
+
+}
+
+/*---------------------------------------------------------------*/
+/*Normal iPad View*/
+@media only screen and (max-device-width: 900px){
+    .card{
+        width: 250px;
+    }
+
+    .navbar-collapse {
+        flex-grow: 0.50;
+    } 
+
+    .form-inline .form-control {
+        width: 160px;
+    }
+
+    .infoCard , .infoCard > *{
+        width: 150px;
+    }
+}
+
+/*---------------------------------------------------------------*/
+/*Normal Phones View*/
+@media only screen and (max-device-width: 750px) {
+    .navbar-collapse {
+        flex-grow: 0.30;
+    }
+
+    .imageContainer{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-device-width: 575px) {
+    .card-group{
+        flex-flow: column;
+    }
+
+    .card-group > * {
+        margin: auto;
+    }
+}
