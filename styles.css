@@ -3,7 +3,7 @@ html,body{
 
     height: 100%;
 
-    background-image: url(assets/images/backGroundImage.png);
+    background: url(assets/images/backGroundImage.png) ;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -237,6 +237,10 @@ h6 {
 /*---------------------------------------------------------------*/
 /*iPad Pro! View*/
 @media only screen and (max-device-width: 1200px) {
+    html,body {
+        background-attachment: scroll;
+        overflow: auto;
+    }
     .card{
         width: 300px;
     }
@@ -263,6 +267,7 @@ h6 {
 /*---------------------------------------------------------------*/
 /*Normal iPad View*/
 @media only screen and (max-device-width: 900px){
+
     .card{
         width: 250px;
     }
