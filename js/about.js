@@ -31,8 +31,7 @@ let aboutHTML = `
             Ty for visiting my web have fun marketing and learning about all the coins out there!
         </p>
         <p>Contact Info: <br>
-            Phone: +972546633054 , Email: <a href="mailto:roye456@gmail.com">roye456@gmail.com</a>
-            <br><a href="https://www.linkedin.com/in/royelmakies/" > <img class="linkedin" src="assets/images/Linkedin.svg.png"> </a>
+           <a href="https://www.linkedin.com/in/royelmakies/" > <img class="linkedin" src="assets/images/Linkedin.svg.png"> </a> , Email: <a href="mailto:roye456@gmail.com">roye456@gmail.com</a>
         </p>
     </div>
     <div class="aboutHTML"><img class="personalPhoto" src="assets/images/imgOfMe.png"></div>
