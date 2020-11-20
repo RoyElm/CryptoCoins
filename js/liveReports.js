@@ -7,7 +7,6 @@ $("#liveReportsLink").on("click", function () {
     $("#liveReportsLink").removeClass("btn-outline-dark").addClass("btn-primary");
     $("#aboutLink").addClass("btn-outline-dark").removeClass("btn-primary");
 
-    // $("#aboutLink").addClass("btn-outline-dark");
     $(".card-group").hide();
     $(".about").hide();
     $(".progressLoading").show();

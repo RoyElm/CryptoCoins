@@ -126,13 +126,7 @@ html,body{
     z-index: 0;
 }
 
-li {
-    margin-top: 10px;
-}
 
-li > button {
-    border-radius: 10px;
-}
 
 /*---------------------------------------------------------------*/
 /*Collapse Css*/
@@ -233,6 +227,23 @@ h6 {
     padding: 25px;
     margin: 5% auto;
 }
+
+li {
+    margin-top: 10px;
+}
+
+li > .buttonSwitch {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 3px lightgray;
+}
+
+li > .buttonSwitch:hover {
+    background-color: skyblue;
+    box-shadow: 1px 3px steelblue;
+}
+
+
 
 /*---------------------------------------------------------------*/
 /*iPad Pro! View*/
