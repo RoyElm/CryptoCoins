@@ -3,6 +3,9 @@
 $(".card-group").show();
 $(".liveReports").hide();
 $(".about").hide();
+$("#homeLink").addClass("btn-primary");
+$("#liveReportsLink").addClass("btn-outline-dark");
+$("#aboutLink").addClass("btn-outline-dark");
 
 //Deleting Live Server Message from Session Storage..
 sessionStorage.clear()

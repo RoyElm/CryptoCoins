@@ -2,7 +2,12 @@
 
 
 $("#liveReportsLink").on("click", function () {
+    //Changing NavBar background Color depends on the user click
+    $("#homeLink").removeClass("btn-primary").addClass("btn-outline-dark");
+    $("#liveReportsLink").removeClass("btn-outline-dark").addClass("btn-primary");
+    $("#aboutLink").addClass("btn-outline-dark").removeClass("btn-primary");
 
+    // $("#aboutLink").addClass("btn-outline-dark");
     $(".card-group").hide();
     $(".about").hide();
     $(".progressLoading").show();
@@ -13,8 +18,8 @@ $("#liveReportsLink").on("click", function () {
         $(".liveReports").show();
         $(".progressLoading").hide();
         $(".liveReports").html("").append(`
-            <h2>There is no coins that have been turn on, <br>
-                to get started please turn on some coins at Home page
+            <h2>There is no coins that have been turned on, <br>
+                To get started,<br> Please choose your desired currency at home page
             </h2>
         `)
     }
@@ -116,7 +121,7 @@ function addingDataToCanvas(switchedCoins) {
 
 function addingCurrentMarketPrice(currentMarketPrice) {
     let index = 0;
-    
+
     for (const item in currentMarketPrice) {
         options.data[index].dataPoints.push(
             { x: new Date(), y: currentMarketPrice[item].USD }

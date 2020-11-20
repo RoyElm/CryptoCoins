@@ -2,6 +2,10 @@
 
 //Home Link event click
 $("#homeLink").on("click", function () {
+    //Changing NavBar background Color depends on the user click
+    $("#homeLink").addClass("btn-primary").removeClass("btn-outline-dark");
+    $("#liveReportsLink").addClass("btn-outline-dark").removeClass("btn-primary");
+    $("#aboutLink").addClass("btn-outline-dark").removeClass("btn-primary");
     
     getCoins();
     $(".card-group").show();

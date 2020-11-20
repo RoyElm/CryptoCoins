@@ -2,6 +2,11 @@
 
 //About button event
 $("#aboutLink").on("click", function () {
+    //Changing NavBar background Color depends on the user click
+    $("#homeLink").removeClass("btn-primary").addClass("btn-outline-dark");
+    $("#liveReportsLink").removeClass("btn-primary").addClass("btn-outline-dark");
+    $("#aboutLink").removeClass("btn-outline-dark").addClass("btn-primary");
+
     $(".card-group").hide();
     $(".liveReports").hide();
     clearInterval(IntervalId);
