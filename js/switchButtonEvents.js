@@ -40,7 +40,7 @@ $(".popover-body").on("click", ".close", function () {
 
 //event on id button
 $(".popover-body").on("click", ".buttonSwitch", function () {
-    const idToUnCheck = $(this).attr("id");
+    const idToUnCheck = $(this).val();
     $(`#${idToUnCheck}`).prop("checked", false);
     $(".popover-body").hide("slow");
     $(tempSwitchId).prop("checked", true);
@@ -51,7 +51,7 @@ $(".popover-body").on("click", ".buttonSwitch", function () {
 
 //Adding modal to the screen with the coins
 function addingModal(switchedCoins) {
-    const idArray = switchedCoins.map(coin => `<li><button class="buttonSwitch" id=${coin}>${coin}</button></li>`);
+    const idArray = switchedCoins.map(coin => `<li><button class="buttonSwitch" value=${coin}>${coin}</button></li>`);
     $(".popover-body").html(" ").append(
         `<div class="pop-inner">
             <button class="close">X</button>
