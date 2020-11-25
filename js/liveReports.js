@@ -22,7 +22,6 @@ $("#liveReportsLink").on("click", function () {
             </h2>
         `)
     }
-
 });
 
 let IntervalId;

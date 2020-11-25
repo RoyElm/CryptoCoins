@@ -36,16 +36,14 @@ function addingCoins(coinsResponse) {
     symbolCardArray = $(".card-title").toArray();
     symbolCardNames = symbolCardArray.map(e => e.innerHTML);
 
-    const switchingButtons = localStorage.getItem("switchArray");
-    if (switchingButtons != null) {
-        switchingButtonsFromLocalStorage(switchingButtons)
+    if (onSwitchArray != null) {
+        switchingButtonsFromLocalStorage(onSwitchArray)
     }
 
 }
 
 //Switching choosing Cards from Local Storage
 function switchingButtonsFromLocalStorage(SwitchButtons) {
-    const switchingButtonsArray = SwitchButtons.split(",");
     for (const key of switchingButtonsArray) {
         $(`#${key}`).prop("checked", true)
     }

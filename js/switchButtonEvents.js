@@ -51,14 +51,14 @@ $(".popover-body").on("click", ".buttonSwitch", function () {
 
 //Adding modal to the screen with the coins
 function addingModal(switchedCoins) {
-    const idArray = switchedCoins.map(coin => `<li><button class="buttonSwitch" value=${coin}>${coin}</button></li>`);
+    const onSwitchButtons = switchedCoins.map(coin => `<li><button class="buttonSwitch" value=${coin}>${coin}</button></li>`);
     $(".popover-body").html(" ").append(
         `<div class="pop-inner">
             <button class="close">X</button>
             <h4>You can choose only 5 coins. </h4>
             Do you want delete one of them??
             <ul>
-                ${idArray.join("")}
+                ${onSwitchButtons.join("")}
             </ul>
         </div>`
     );
@@ -66,14 +66,15 @@ function addingModal(switchedCoins) {
 
 //Adding switched on button to onSwitchArray
 function settingSwitchedArray(checked) {
+
     onSwitchArray.push(checked);
     localStorage.setItem("switchArray", onSwitchArray);
 }
 
 //Removing switched off button from onSwitchArray
 function removingFromArray(unChecked) {
-    const buttonIndex = onSwitchArray.indexOf(unChecked);
-    onSwitchArray.splice(buttonIndex, 1);
+    onSwitchArray = onSwitchArray.filter(symbol => symbol === unChecked ? "" : symbol);
+
     if (onSwitchArray.length === 0) {
         localStorage.clear();
         return;
