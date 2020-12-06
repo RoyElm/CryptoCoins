@@ -44,7 +44,7 @@ function addingCoins(coinsResponse) {
 
 //Switching choosing Cards from Local Storage
 function switchingButtonsFromLocalStorage(SwitchButtons) {
-    for (const key of switchingButtonsArray) {
+    for (const key of SwitchButtons) {
         $(`#${key}`).prop("checked", true)
     }
 }
